@@ -1,0 +1,93 @@
+{
+  "telemetry": {
+    "metrics": false,
+    "diagnostics": false
+  },
+  "theme": {
+    "mode": "system",
+    "light": "One Light",
+    "dark": "One Dark"
+  },
+  "lsp": {
+    "pylsp": {
+      "settings": {
+        "plugins": {
+          "mypy": {
+            "enabled": true
+          }
+        }
+      }
+    }
+  },
+  "file_types": {
+    "BiomeCompatible": [
+      "*.js",
+      "*.jsx",
+      "*.ts",
+      "*.tsx",
+      "*.css",
+      "*.scss",
+      "*.json",
+      "*.jsonc",
+      "*.md"
+    ],
+    "Package": ["package.json"],
+    "Gherkin": ["*.feature"]
+  },
+  "languages": {
+    "Python": {
+      "language_servers": ["pylsp", "ruff"],
+      "format_on_save": "on",
+      "formatter": [
+        {
+          "code_actions": {
+            "source.organizeImports.ruff": true,
+            "source.fixAll.ruff": true
+          }
+        },
+        {
+          "language_server": {
+            "name": "ruff"
+          }
+        }
+      ]
+    },
+    "BiomeCompatible": {
+      "language_servers": ["biome"],
+      "format_on_save": "on",
+      "formatter": [
+        {
+          "code_actions": {
+            "source.fixAll.biome": true,
+            "source.organizeImports.biome": true
+          }
+        },
+        {
+          "language_server": {
+            "name": "biome"
+          }
+        }
+      ],
+      "prettier": {
+        "allowed": false
+      }
+    },
+    "Gherkin": {
+      "format_on_save": "on",
+      "formatter": {
+        "external": {
+          "command": "reformat-gherkin"
+        }
+      }
+    },
+    "Package": {
+      "format_on_save": "on",
+      "formatter": {
+        "external": {
+          "command": "syncpack",
+          "arguments": ["format"]
+        }
+      }
+    }
+  }
+}
