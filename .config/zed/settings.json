@@ -1,4 +1,7 @@
 {
+  "features": {
+    "edit_prediction_provider": "zed"
+  },
   "telemetry": {
     "metrics": false,
     "diagnostics": false
