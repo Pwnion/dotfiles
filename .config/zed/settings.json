@@ -1,4 +1,7 @@
 {
+  "features": {
+    "edit_prediction_provider": "zed"
+  },
   "telemetry": {
     "metrics": false,
     "diagnostics": false
@@ -6,7 +9,7 @@
   "theme": {
     "mode": "system",
     "light": "One Light",
-    "dark": "One Dark"
+    "dark": "Gruvbox Light Hard"
   },
   "lsp": {
     "pylsp": {
