@@ -1,0 +1,103 @@
+# --- Global Settings --- #
+
+start-at-login = true
+default-root-container-layout = 'tiles'
+default-root-container-orientation = 'auto'
+enable-normalization-flatten-containers = true
+enable-normalization-opposite-orientation-for-nested-containers = true
+automatically-unhide-macos-hidden-apps = true
+
+# after-startup-command = [
+#     'exec-and-forget /opt/homebrew/opt/sketchybar/bin/sketchybar',
+# ]
+# exec-on-workspace-change = [
+#     '/bin/bash',
+#     '-c',
+#     '/opt/homebrew/opt/sketchybar/bin/sketchybar --trigger aerospace_workspace_change AEROSPACE_FOCUSED_WORKSPACE=$AEROSPACE_FOCUSED_WORKSPACE AEROSPACE_PREV_WORKSPACE=$AEROSPACE_PREV_WORKSPACE',
+# ]
+
+[gaps]
+inner.horizontal = 6
+inner.vertical = 6
+outer.left = 6
+outer.right = 6
+outer.top = 6
+outer.bottom = 6
+
+# --- Force Applications to Specific Monitors on Startup --- #
+
+[[on-window-detected]]
+if.app-id = 'company.thebrowser.Browser'
+if.during-aerospace-startup = true
+run = 'move-node-to-workspace 1'
+
+[[on-window-detected]]
+if.app-id = 'com.tinyspeck.slackmacgap'
+if.during-aerospace-startup = true
+run = 'move-node-to-workspace 2'
+
+[[on-window-detected]]
+if.app-id = 'com.DanPristupov.Fork'
+if.during-aerospace-startup = true
+run = 'move-node-to-workspace 3'
+
+[[on-window-detected]]
+if.app-id = 'com.mitchellh.ghostty'
+if.during-aerospace-startup = true
+run = 'move-node-to-workspace 4'
+
+[[on-window-detected]]
+if.app-id = 'com.todesktop.230313mzl4w4u92'
+if.during-aerospace-startup = true
+run = 'move-node-to-workspace 6'
+
+[[on-window-detected]]
+if.app-id = 'dev.zed.Zed'
+if.during-aerospace-startup = true
+run = 'move-node-to-workspace 7'
+
+[[on-window-detected]]
+if.app-id = 'com.electron.dockerdesktop'
+if.during-aerospace-startup = true
+run = 'move-node-to-workspace 9'
+
+[[on-window-detected]]
+if.app-id = 'com.apple.Notes'
+if.during-aerospace-startup = true
+run = 'move-node-to-workspace 10'
+
+# --- Exclude Applications from Tiling --- #
+
+[[on-window-detected]]
+if.app-id = 'com.apple.systemsettings'
+run = 'layout floating'
+
+[[on-window-detected]]
+if.app-id = 'com.apple.calculator'
+run = 'layout floating'
+
+[[on-window-detected]]
+if.app-id = 'com.apple.quicktimeplayer'
+run = 'layout floating'
+
+[[on-window-detected]]
+if.app-id = 'com.apple.finder'
+run = 'layout floating'
+
+[[on-window-detected]]
+if.app-id = 'com.apple.MobileSMS'
+run = 'layout floating'
+
+# --- Monitor Settings --- #
+
+[workspace-to-monitor-force-assignment]
+1 = 'main'
+2 = 'main'
+3 = 'main'
+4 = 'main'
+5 = 'main'
+6 = 'secondary'
+7 = 'secondary'
+8 = 'secondary'
+9 = 'secondary'
+10 = 'secondary'

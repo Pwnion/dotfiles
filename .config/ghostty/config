@@ -1,0 +1,9 @@
+theme = Catppuccin Mocha
+font-size = 14
+background-blur-radius = 20
+background-opacity = 0.8
+background-blur-radius = 20
+keybind = global:cmd+grave_accent=toggle_quick_terminal
+confirm-close-surface = false
+quit-after-last-window-closed = true
+keybind = shift+enter=text:\n

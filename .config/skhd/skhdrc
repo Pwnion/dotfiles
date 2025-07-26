@@ -1,0 +1,80 @@
+# Focus space
+cmd - 1 : aerospace workspace 1;
+cmd - 2 : aerospace workspace 2;
+cmd - 3 : aerospace workspace 3;
+cmd - 4 : aerospace workspace 4;
+cmd - 5 : aerospace workspace 5;
+cmd - 6 : aerospace workspace 6;
+cmd - 7 : aerospace workspace 7;
+cmd - 8 : aerospace workspace 8;
+cmd - 9 : aerospace workspace 9;
+cmd - 0 : aerospace workspace 10;
+
+# Move window to space and focus
+cmd + shift - 1 : aerospace move-node-to-workspace --focus-follows-window 1;
+cmd + shift - 2 : aerospace move-node-to-workspace --focus-follows-window 2;
+cmd + shift - 3 : aerospace move-node-to-workspace --focus-follows-window 3;
+cmd + shift - 4 : aerospace move-node-to-workspace --focus-follows-window 4;
+cmd + shift - 5 : aerospace move-node-to-workspace --focus-follows-window 5;
+cmd + shift - 6 : aerospace move-node-to-workspace --focus-follows-window 6;
+cmd + shift - 7 : aerospace move-node-to-workspace --focus-follows-window 7;
+cmd + shift - 8 : aerospace move-node-to-workspace --focus-follows-window 8;
+cmd + shift - 9 : aerospace move-node-to-workspace --focus-follows-window 9;
+cmd + shift - 0 : aerospace move-node-to-workspace --focus-follows-window 10;
+
+# Move window to space without focus
+alt + shift - 1 : aerospace move-node-to-workspace 1;
+alt + shift - 2 : aerospace move-node-to-workspace 2;
+alt + shift - 3 : aerospace move-node-to-workspace 3;
+alt + shift - 4 : aerospace move-node-to-workspace 4;
+alt + shift - 5 : aerospace move-node-to-workspace 5;
+alt + shift - 6 : aerospace move-node-to-workspace 6;
+alt + shift - 7 : aerospace move-node-to-workspace 7;
+alt + shift - 8 : aerospace move-node-to-workspace 8;
+alt + shift - 9 : aerospace move-node-to-workspace 9;
+alt + shift - 0 : aerospace move-node-to-workspace 10;
+
+# Join windows into a common container
+rcmd + rshift + ralt + rctrl + lalt - up : aerospace join-with up;
+rcmd + rshift + ralt + rctrl + lalt - down : aerospace join-with down;
+rcmd + rshift + ralt + rctrl + lalt - left : aerospace join-with left;
+rcmd + rshift + ralt + rctrl + lalt - right : aerospace join-with right;
+
+# Traverse focus across windows
+rcmd + rshift + ralt + rctrl - up : aerospace focus --boundaries all-monitors-outer-frame --boundaries-action wrap-around-all-monitors up;
+rcmd + rshift + ralt + rctrl - down : aerospace focus --boundaries all-monitors-outer-frame --boundaries-action wrap-around-all-monitors down;
+rcmd + rshift + ralt + rctrl - left : aerospace focus --boundaries all-monitors-outer-frame --boundaries-action wrap-around-all-monitors left;
+rcmd + rshift + ralt + rctrl - right : aerospace focus --boundaries all-monitors-outer-frame --boundaries-action wrap-around-all-monitors right;
+
+# Traverse focus across windows
+rcmd + rshift + ralt + rctrl + lcmd - up : aerospace move up;
+rcmd + rshift + ralt + rctrl + lcmd - down : aerospace move down;
+rcmd + rshift + ralt + rctrl + lcmd - left : aerospace move left;
+rcmd + rshift + ralt + rctrl + lcmd - right : aerospace move right;
+
+# Maximise a window
+rcmd + rshift + rctrl + ralt - f : aerospace fullscreen;
+
+# Toggle window float
+rcmd + rshift + rctrl + ralt - t : aerospace layout tiling floating;
+
+# Balance out tree of windows
+rcmd + rshift + rctrl + ralt - b : aerospace flatten-workspace-tree;
+
+# Swap focus between current and previously focused window
+cmd - tab : aerospace workspace-back-and-forth;
+
+# Open Ghostty
+rcmd + rshift + rctrl + ralt - g : open -n /Applications/Ghostty.app
+
+# Swap windows
+# rcmd + rshift + ralt + rctrl + cmd - up : yabai -m window --swap north;
+# rcmd + rshift + ralt + rctrl + cmd - down : yabai -m window --swap south;
+# rcmd + rshift + ralt + rctrl + cmd - left : yabai -m window --swap west;
+# rcmd + rshift + ralt + rctrl + cmd - right : yabai -m window --swap east;
+
+# Move window to display left and right
+# rcmd + rshift + ralt + rctrl + shift - up : yabai -m window --display north; yabai -m display --focus north;
+# rcmd + rshift + ralt + rctrl + shift - down : yabai -m window --display south; yabai -m display --focus south;
+# rcmd + rshift + ralt + rctrl + shift - left : yabai -m window --display west; yabai -m display --focus west;
+# rcmd + rshift + ralt + rctrl + shift - right : yabai -m window --display east; yabai -m display --focus east;
